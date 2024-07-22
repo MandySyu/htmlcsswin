@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+    font-family: "Bruno Ace", sans-serif;
+    line-height: 1.5;
+}
+
+
+/*以下表示所有的html標籤都可以吃到這個語法*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box; /*表示寬度設定多少，呈現出來就是多少，不會受到border或padding的影響*/
+    /*outline: solid 1px;*/
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color:#D1D1D1;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.container{
+    width: 1296px; /*助教是寫1296px*/
+    margin: 0 auto;
+}
+
+.h1{
+    font-size: 128px;
+}
+
+h2{
+    font-size: 64px;
+}
+
+.fs-1{
+    font-size: 32px;
+}
+
+.fs-2{
+    font-size: 24px;
+}
+
+.fs-3{
+    font-size: 20px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-start{  /*讓預設原本是align-items: stretch(按鈕便很寬) 變成align-items: star (按鈕恢復正常)*/
+    align-items:start;
+}
+
+.about-list li{
+    width: 48%;
+    box-shadow: 4px 4px 4px 0px #00000014;
+
+    
+}
+
+/*layout*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header{
+    background: #000;
+    color: #D1D1D1;
+    padding: 40px 20px;
+
+}
+
+.about{
+    padding: 160px;
+}
+
+.mb-6{
+    margin-bottom: 24px;
+}
+
+.mr-6{
+  margin-right: 24px;
+}
+
+.mb-7{
+    margin-bottom: 28px;
+}
+
+
+
+/*page*/
+.banner{
+    background: #000;
+    color: white;
+}
+
+
+.ml{
+    margin-left: 24px;
+}
+
+.text-primary{
+    color:#00FFA3;
+}
+
+.banner-title-strong{
+    text-align: right;
+    display: block;/*因為span是行內元素  所以要改成區塊元素才會向右對齊*/
+}
+
+.intro{
+    background-image: url("img/background-img.png");/*背景用圖片呈現的語法，背景本身沒有高度，要再另外設定高度或放內容才會呈現*/
+    background-repeat: no-repeat; /*背景不重複*/
+    background-size: cover;/*讓圖片填滿整個背景*/
+    color: white;
+    padding: 160px 0;
+}
+
+
+.con-w{
+    width: 526px;
+}
+
+
+.contant{
+    background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);/*o背景漸層*/
+    color:white;
+    padding: 96px 0;
+
+}
+
+
+
+/*componet*/
+
+.btn{
+    padding: 12px 24px;
+    border-radius: 32px;
+}
+
+.btn-light{
+    background: white;
+    color:#000;
+}
+
+.btn-black{
+    background: #000;
+    color:white;
+}
+
+.mr-6{
+    margin-right: 24px;
+}
+
+.pb-9{
+    padding-bottom: 36px;
+}
+
+.pb-8{
+    padding-bottom: 32px;
+}
+
+
+
+
+
+.about-list{
+    width: 636px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-desc{
+    width: 526px;
+}
+
+.jc-b{
+    justify-content: space-between;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.trending-size{
+    width: 100px;
+    height: 100px;
+}
+
+.ml{
+    margin-left: 113px;
+}
+
+.social-link{
+    border-radius: 40px;/* 圓角 */
+}
+
+.social-link:hover{
+    box-shadow: 0px 0px 16px 3px #9094FFE5;
+    transition: 1s;/*一秒後陰影再出現ˋ*/
+}
+
+.pr-5{
+    padding-right: 20px;
+}
+
+.mr-x{
+    margin-right: 16px;
+}
+
+
+.project-litlie{
+    width: 746px;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+
+.project{
+    padding: 160px 0;
+}
+
+.footer{
+    background: #000;
+    padding: 40px  0;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
